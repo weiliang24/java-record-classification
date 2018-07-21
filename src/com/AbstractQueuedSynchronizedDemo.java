@@ -1,10 +1,38 @@
 package com;
 
+import java.io.Serializable;
+
 /**
  *Java JUC 并发包基础学习第一篇
  * Created by muweiliang on 2018/7/11.
  */
-public class AbstractQueuedSynchronizedDemo {
+
+public class AbstractQueuedSynchronizedDemo implements Serializable{
+
+
+    private static final long serialVersionUID = -8994195011091237590L;
+
+    protected AbstractQueuedSynchronizedDemo () {}
+
+
+    private transient volatile Node head;
+
+    private transient volatile  Node tail;
+
+    /**线程根据此字段争夺或者*/
+    private volatile int state;
+
+    public int getState() {
+        return state;
+    }
+
+    public void setState(int newState) {
+        this.state = newState;
+    }
+
+
+
+
 
     /**
      * 内部类用于包装线程
