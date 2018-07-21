@@ -4,7 +4,7 @@ package com;
  *Java JUC 并发包基础学习第一篇
  * Created by muweiliang on 2018/7/11.
  */
-public class AqsDemo  {
+public class AbstractQueuedSynchronizedDemo {
 
     /**
      * 内部类用于包装线程
